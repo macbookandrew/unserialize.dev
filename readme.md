@@ -4,7 +4,7 @@
 
 A quick-and-dirty PHP script to unserialize a string in PHP.
 
-Clone (or [download](https://github.com/macbookandrew/unserialize.dev/archive/master.zip) and expand the zip file) into your documents root and point [unserialize.dev](http://unserialize.dev) to the folder.
+[Clone](https://github.com/macbookandrew/unserialize.dev/archive/master.zip) (or [download](https://github.com/macbookandrew/unserialize.dev/archive/master.zip) and expand the zip file) into your documents root and point [unserialize.dev](http://unserialize.dev) to the folder.
 
 Enter your serialized data into the `textarea`, submit, and boom!—your serialized data is expanded to a much more human-readable view!
 
