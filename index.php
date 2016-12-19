@@ -13,7 +13,7 @@
    </head>
    <body>
        <form>
-            <textarea name="input" placeholder='a:2:{i:0;s:12:"Sample array";i:1;a:2:{i:0;s:5:"Apple";i:1;s:6:"Orange";}}'><?php echo $_GET['input'] ? $_GET['input'] : ''; ?></textarea><br/>
+            <textarea name="input"><?php echo $_GET ? $_GET['input'] : 'a:2:{i:0;s:12:"Sample array";i:1;a:2:{i:0;s:5:"Apple";i:1;s:6:"Orange";}}'; ?></textarea><br/>
             <input type="submit" />
         </form>
 
