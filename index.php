@@ -12,15 +12,23 @@
         </style>
    </head>
    <body>
-       <form>
-            <textarea name="input"><?php echo $_GET ? $_GET['input'] : 'a:2:{i:0;s:12:"Sample array";i:1;a:2:{i:0;s:5:"Apple";i:1;s:6:"Orange";}}'; ?></textarea><br/>
+        <?php
+        if ($_POST && isset($_POST['input'])) {
+            $data = $_POST['input'];
+        } elseif ($_GET && isset($_GET['input'])) {
+            $data = $_GET['input'];
+        } else {
+            $data = 'a:2:{i:0;s:12:"Sample array";i:1;a:2:{i:0;s:5:"Apple";i:1;s:6:"Orange";}}';
+        }
+       ?>
+       <form method="post">
+            <textarea name="input"><?php echo $data; ?></textarea><br/>
             <input type="submit" />
         </form>
 
         <?php
-        if ($_GET) {
-            $unserialized = unserialize($_GET['input']);
-            echo'<pre><code>';var_dump($unserialized);echo'</code></pre>';
+        if ($data) {
+            echo'<pre><code>';var_dump(unserialize($data));echo'</code></pre>';
         }
         ?>
     </body>
