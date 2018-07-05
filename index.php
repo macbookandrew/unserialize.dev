@@ -9,6 +9,9 @@
                margin-bottom: 1em;
            }
            input[type="submit"] { font-size: 2em; }
+           body > .kint-rich.kint-folder {
+              position: initial;
+           }
         </style>
    </head>
    <body>
@@ -28,7 +31,9 @@
 
         <?php
         if ($data) {
-            echo'<pre><code>';var_dump(unserialize($data));echo'</code></pre>';
+            require 'kint.phar';
+            $data = unserialize($data);
+            +d($data);
         }
         ?>
     </body>
